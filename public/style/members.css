@@ -1,0 +1,174 @@
+@import url(global.css);
+
+.header {
+	text-align: center;
+	padding: 1rem;
+	color: var(--white);
+	background: var(--main);
+}
+#menu-icon {
+	display: none;
+}
+.res-menu {
+	display: none;
+}
+.input {
+	margin-top: 1rem;
+	padding: 0 7rem 0 3rem;
+	display: flex;
+	align-items: center;
+	/* justify-content: space-between; */
+}
+.input input {
+	height: 30px;
+	border-radius: 0.5rem;
+	border: none;
+	outline: none;
+	padding: 12px;
+	width: 20%;
+}
+.input select {
+	height: 30px;
+	width: 20%;
+	border: none;
+	border-radius: 0.5rem;
+	outline: none;
+	margin-left: 10rem;
+}
+.input button {
+	padding: 0.5rem 1rem;
+	color: var(--white);
+	background: var(--main);
+	border: none;
+	outline: none;
+	border-radius: 0.5rem;
+	font-family: var(--font-family);
+	cursor: pointer;
+	margin-left: 15rem;
+}
+.table {
+	margin-top: 1rem;
+	padding: 2rem 5rem 2rem 2rem;
+	background: #fffffa;
+}
+.table table {
+	width: 100%;
+	text-align: left;
+	border-spacing: 1rem;
+}
+.table table td {
+	color: #333333;
+}
+.table table td a {
+	color: #333333;
+	transition: all 300ms ease-in-out;
+}
+.table table td a:hover {
+	text-decoration: underline;
+}
+.table table td img {
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	object-fit: cover;
+}
+.table table .active {
+	color: #0f9e26;
+}
+.table table .inactive {
+	color: #db3c3c;
+}
+.save {
+	display: none;
+	background: #32ad60;
+	color: #ffffff;
+	outline: none;
+	border: none;
+	padding: 0.5rem 1rem;
+	border-radius: 0.3rem;
+}
+.edit {
+	background: #2199e8;
+	color: #ffffff;
+	padding: 0.5rem 1rem;
+	cursor: pointer;
+	outline: none;
+	border: none;
+	border-radius: 0.3rem;
+}
+
+@media (max-width: 60em) {
+	.header {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 1rem 2rem;
+	}
+	.personal {
+		gap: 2rem;
+	}
+	#menu-icon {
+		display: block;
+		z-index: 10002;
+	}
+	#menu-icon.active:before {
+		content: '\f00d';
+		color: var(--white);
+	}
+	.header .res-menu {
+		display: block;
+	}
+	.header .res-menu ul li {
+		display: block;
+		margin: 50px;
+	}
+	.header .res-menu {
+		position: fixed;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: -100%;
+		right: 0;
+		background-color: var(--main);
+		transition: all 300ms ease;
+		font-family: 'nunito', sans-serif;
+		z-index: 10001;
+	}
+	.header .res-menu.active {
+		left: 0;
+	}
+	.header .res-menu ul li a {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-decoration: none;
+		gap: 20px;
+		color: var(--white);
+	}
+	.table {
+		padding: 2rem 1rem;
+		overflow-x: auto;
+	}
+	.input input {
+		width: 100%;
+	}
+	.input select {
+		width: 100%;
+		margin-left: 2rem;
+	}
+	.input button {
+		margin-left: 2rem;
+	}
+	.input {
+		padding: 0 3rem;
+	}
+}
+@media (max-width: 30em) {
+	.header h2 {
+		font-size: 1rem;
+	}
+}

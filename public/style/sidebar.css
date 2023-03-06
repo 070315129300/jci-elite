@@ -1,0 +1,72 @@
+@import url(global.css);
+
+body {
+	background: #f2f2fa;
+	display: grid;
+	grid-template-columns: 1fr 7fr;
+	font-family: var(--font-family);
+}
+a {
+	text-decoration: none;
+}
+.sidebar {
+	grid-column: 1 / 2;
+	padding: 2rem;
+	background: var(--white);
+	font-family: var(--font-family);
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+	padding: 1rem;
+}
+.sidebar .logo {
+	width: 100px;
+}
+.sidebar .account {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+}
+.sidebar .account .pfp img {
+	width: 50px;
+	height: 50px;
+	object-fit: cover;
+	border-radius: 50%;
+}
+.sidebar .account p {
+	color: var(--accent);
+}
+hr {
+	border-top: 1px solid var(--accent);
+}
+.sidebar .links {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+}
+.sidebar a {
+	color: var(--main);
+	transition: all 300ms ease-in-out;
+}
+.sidebar a:hover {
+	text-decoration: underline;
+}
+.sidebar .design {
+	margin-top: 100%;
+}
+main {
+	grid-column: 2 / 3;
+}
+@media (max-width: 60em) {
+	.sidebar {
+		display: none;
+	}
+	body {
+		display: flex;
+		flex-direction: column;
+	}
+	main {
+		display: flex;
+		flex-direction: column;
+	}
+}
